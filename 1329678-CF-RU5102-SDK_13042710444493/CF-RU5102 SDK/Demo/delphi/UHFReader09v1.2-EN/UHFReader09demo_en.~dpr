@@ -1,0 +1,19 @@
+program UHFReader09demo_en;
+
+{%File 'History.txt'}
+
+uses
+  Forms,
+  RRU9809M_DLL_Head in 'RRU9809M_DLL_Head.pas',
+  cRRU9809_Head in 'cRRU9809_Head.pas',
+  fRRU9809demomain in 'fRRU9809demomain.pas' {frmRRU9809demomain},
+  fRRprogress in 'fRRProgress.pas' {frmRRProgress};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TfrmRRU9809demomain, frmRRU9809demomain);
+  Application.CreateForm(TfrmRRProgress, frmRRProgress);
+  Application.Run;
+end.
